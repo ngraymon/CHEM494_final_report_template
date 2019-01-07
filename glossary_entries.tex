@@ -1,0 +1,67 @@
+% some example acronym/simple glossary definitions
+
+% \newacronym{identifier}{acronym/short form goes here}{long form description goes here}
+\newacronym{pi}{PI}{path integral}
+\newacronym{pimc}{PIMC}{path integral Monte Carlo}
+\newacronym{pimd}{PIMD}{path integral molecular dynamics}
+\newacronym{pigs}{PIGS}{path integral ground state}
+
+% some example extended glossary definitions
+
+% \newglossaryentry{identifier}
+% {
+%   name={short form},
+%   description={long form},
+%   first={specific form used the first time this definition is referenced},
+% }
+\newglossaryentry{cs-rpmd}
+{
+  name={s},
+  description={coherent-state mapping ring polymer molecular dynamics},
+  first={coherent-state mapping (CS)-RPMD},
+}
+\newglossaryentry{mv-rpmd}
+{
+  name={MV-RPMD},
+  description={mapping-variable ring polymer molecular dynamics},
+  first={mapping-variable (MV)-RPMD},
+}
+
+
+% more example extended glossary definitions
+% \newglossaryentry{identifier}
+% {
+%   name={short form},
+%   description={long form},
+%   first={specific form used the first time this definition is referenced},
+%   plural={plural short form},
+%   descriptionplural={plural long form},
+%   firstplural={specific plural form used the first time this definition is referenced}
+% }
+\newglossaryentry{keq}
+{
+  name={$K_{eq}$},
+  description={equilibrium constant},
+  first={\glsentrydesc{keq} (\glsentrytext{keq})},
+  plural={$K_{eq}$},
+  descriptionplural={equilibrium constants},
+  firstplural={\glsentrydescplural{keq} (\glsentryplural{keq})}
+}
+\newglossaryentry{rateconstant}
+{
+  name={$k$},
+  description={rate constant},
+  first={\glsentrydesc{rateconstant} (\glsentrytext{rateconstant})},
+  plural={$k$},
+  descriptionplural={rate constants},
+  firstplural={\glsentrydescplural{rateconstant} (\glsentryplural{rateconstant})}
+}
+\newglossaryentry{z}
+{
+  name={$Z$},
+  description={partition function},
+  first={\glsentrydesc{z} \glsentrytext{z}},
+  plural={$Z$'s},
+  descriptionplural={partition functions},
+  firstplural={\glsentrydescplural{z} (\glsentryplural{z})}
+}

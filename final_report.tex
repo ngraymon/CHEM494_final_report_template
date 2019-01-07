@@ -1,0 +1,145 @@
+\documentclass[11pt, letterpaper, oneside]{article}  % define the basic details of our document
+% ------------------------------------------------------------------------------------------------------------
+\input{prelude}      % all the document preperation is inside this file
+% ------------------------------------------------------------------------------------------------------------
+\usepackage{lipsum}  % just to provide filler text for template spacing
+\usepackage{mwe}     % just to provide filler images
+% ------------------------------------------------------------------------------------------------------------
+\addbibresource{references.bib}
+\graphicspath{{./images/}} % look inside ./Images relative to the location of the main .tex file
+\loadglsentries{./glossary_entries.tex}   % all our acronyms
+% \makeglossaries
+% ------------------------------------------------------------------------------------------------------------
+
+% Length of report will vary with the project and its details, but normally the main body of the report will range from 15-30 pages. Neatness, logical order of thought, clarity of expression are important--an overly long report is not necessarily a good one. If in doubt, get your supervisor's advice.
+
+% ------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------
+\maketitlepage \pagestyle{empty} % this creates the title page
+\begin{document}
+\clearpage \doublespacing \pagestyle{plain}% specific format for all other pages
+% ------------------------------------------------------------------------------------------------------------
+\section*{Acknowledgements}
+% Acknowledge the assistance of the research supervisor and any other faculty members, graduate students, departmental members and others who have been especially helpful with any aspect of the project.
+\lipsum[39]
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section*{Summary}
+% The next page should be a Summary, not normally more than half a page, concisely summarizing what is being presented in the report. The Summary will highlight any important features discovered or determined.
+Here is some example text.
+This is an equation:
+\begin{equation}\label{eq:template}
+    x \times 2 = x + x.
+\end{equation}
+Here is an example table:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ l c r }
+        \toprule
+        x & y & z \\
+        \midrule
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9 \\
+        % \botrule
+    \end{tabular}
+    \caption{\label{table:one} Computational Parameters.}
+\end{table}\\
+Here is a reference~\cite{goodfellow1990molecular}, and another reference~\cite{schmidt2014inclusion}, and 3 different references at once~\cite{sarsa2000path,constable2013langevin,goodfellow1990molecular}.
+This is how I would refer back to \cref{eq:template}, and how I reference \cref{table:one}.\\
+The rest of the document has filler example text using the lipsum package.
+This is how you use acronyms/glossary entries: \gls{pi}. Then the next time I talk about \gls{pi}. Another example would be \gls{z}, and we can talk about multiple \glspl{z}, or use the full description of the \glsdesc{z}.
+\newpage
+
+
+% ------------------------------------------------------------------------------------------------------------
+\pagestyle{plain}
+\pagenumbering{roman} % use roman page numbering
+\setcounter{page}{1} % reset the page count to 1
+% ------------------------------------------------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+\listoffigures
+\newpage
+
+\listoftables
+\newpage
+
+
+% ------------------------------------------------------------------------------------------------------------
+\pagenumbering{arabic} % change to arabic page numbering
+\setcounter{page}{1} % reset the page count to 1
+% ------------------------------------------------------------------------------------------------------------
+\section{Introduction}
+\lipsum[39]
+\subsection{Outline}
+\lipsum[41-42]
+\newpage%
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Background}
+% here are some example sub headings
+\subsection{Vibronic coupling}
+\lipsum[53-57]
+\subsection{Wavefunctions}
+\lipsum[58-62]
+\subsection{Real time propagation}
+\lipsum[62-65]
+\newpage%
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Theoretical Methods / Proposal}
+\subsection{First part of proposal}
+\lipsum[47-50]
+\subsection{A possible second part of the proposal}
+\lipsum[47-50]
+\subsection{A third part of the proposal}
+\lipsum[60-65]
+\newpage%
+
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Results \& Discussion}
+\lipsum[41-47]
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=0.8\columnwidth]{example-image}
+    \caption{\label{fig:one}caption of image}
+\end{figure}
+
+\lipsum[70-72]
+
+\begin{figure}
+    \center
+    \includegraphics[width=1.0\linewidth]{example-image}
+    \caption{\label{fig:two}caption of another image}
+\end{figure}
+
+\lipsum[70-72]
+
+\begin{figure}[!h]
+    \center
+    \includegraphics[width=0.8\columnwidth]{example-image}
+    \caption{\label{fig:three}caption of image}
+\end{figure}
+
+\newpage%
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Concluding Remarks}
+\lipsum[80-83]
+\newpage%
+
+% ----------------------------------------------------------------------------------------------------------
+\addcontentsline{toc}{section}{References}
+\renewcommand*{\bibfont}{\scriptsize}
+\printbibliography
+
+% ------------------------------------------------------------------------------------------------------------
+\end{document}
+% ------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------

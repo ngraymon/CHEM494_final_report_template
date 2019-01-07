@@ -1,0 +1,59 @@
+% ------------------------------------------------------------------------------------------------------------
+% new clever ref
+% \crefname{verb}{output}{output}
+% ------------------------------------------------------------------------------------------------------------
+% macros for basis sets
+% \NewDocumentCommand{\sixG}{}{$6\text{-}31\text{G*}$\,}
+% \NewDocumentCommand{\sixGpp}{}{$6\text{-}31\text{++G**}$\,}
+% %
+% \NewDocumentCommand{\ccPVTZ}{}{cc-PVTZ\,}
+% \NewDocumentCommand{\TZPP}{}{TZ2P\,}
+% \NewDocumentCommand{\DZP}{}{DZP\,}
+% ------------------------------------------------------------------------------------------------------------
+
+% \NewDocumentCommand{\ihchi}{ O{} O{} }{\raisebox{\depth}{$#1\chi$}}
+% \NewDocumentCommand{\hchi}{}{{\mathpaletter\ihchi\relax}}
+\NewDocumentCommand{\hchi}{ G{} G{} }{ \raisebox{\depth}{$\chi$}_{#1}^{#2} }
+% ------------------------------------------------------------------------------------------------------------
+% commands for position and momenutm operators
+\NewDocumentCommand{\p}{G{} G{}}{p_{#1}^{#2}}
+\NewDocumentCommand{\q}{G{} G{}}{q_{#1}^{#2}}
+\NewDocumentCommand{\hp}{G{} G{}}{\hat{p}_{#1}^{#2}}
+\NewDocumentCommand{\hq}{G{} G{}}{\hat{q}_{#1}^{#2}}
+% ------------------------------------------------------------------------------------------------------------
+% commands for Hamiltonian, kinetic and potential operators
+% \RenewDocumentCommand{\H}{ O{} }{\hat{H}_{#1}}
+\NewDocumentCommand{\Ham}{ G{} }{\hat{H}_{#1}}
+\NewDocumentCommand{\h}{ G{} }{\hat{h}_{#1}}
+\NewDocumentCommand{\T}{ G{} }{\hat{T}_{#1}}
+\NewDocumentCommand{\V}{ G{} }{\hat{V}_{#1}}
+\NewDocumentCommand{\U}{ G{} }{\hat{U}_{#1}}
+\NewDocumentCommand{\K}{ G{} }{\hat{K}_{#1}}
+% ------------------------------------------------------------------------------------------------------------
+% mathematical shorthands
+\NewDocumentCommand{\kB}{}{k_\text{B}}
+\NewDocumentCommand{\kBT}{}{k_\text{B}T}
+\NewDocumentCommand{\identity}{}{\mathds{1}}
+\NewDocumentCommand{\limP}{}{\lim_{P \to \infty}}
+\NewDocumentCommand{\lsum}{ m G{} }{\sum\limits_{#1}^{#2}}
+\NewDocumentCommand{\lprod}{ m G{} }{\prod\limits_{#1}^{#2}}
+\NewDocumentCommand{\ePH}{}{e^{-\beta_{P}\hat{H}}}
+% ------------------------------------------------------------------------------------------------------------
+%%%% vector representation
+\NewDocumentCommand{\vect}{m}{\bm{#1}} % BOLD  vectors
+% \NewDocumentCommand{\vect}{m}{\vec{#1}} % ARROW vectors
+% ------------------------------------------------------------------------------------------------------------
+%%%% matrix representation
+% \NewDocumentCommand{\matr}{m}{#1} % pure math version
+% \NewDocumentCommand{\matr}{m}{\bm{#1}} % ISO complying version
+\NewDocumentCommand{\matr}{m}{\bm{\underline{#1}}} % underline
+% ------------------------------------------------------------------------------------------------------------
+% helps for bra-kets and when there are a lot of exponentials
+\NewDocumentCommand{\eB}{m}{e^{-\beta#1}}
+\NewDocumentCommand{\eT}{m}{e^{-\tau#1}}
+\NewDocumentCommand{\eTh}{ }{\eT{\h}}
+\NewDocumentCommand{\eTH}{ }{\eT{\Ham}}
+\NewDocumentCommand{\eTV}{ }{\eT{\V}}
+\NewDocumentCommand{\etf}{m}{e^{-\frac{\tau}{2}#1}}
+\NewDocumentCommand{\etfh}{ }{\etf{\h}}
+% ------------------------------------------------------------------------------------------------------------
